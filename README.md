@@ -2,7 +2,7 @@
 Nuclear magnetic resonance (NMR) spectroscopy provides us a powerful tool to analyze mixtures consisting of small molecules but is difficult to identify compounds in mixtures because of chemical shift variation between samples and peak overlapping among molecules. We presented a pseudo Siamese convolutional neural network method (pSCNN) to solve the problems of compound identification in NMR spectra of mixtures. This is the code repo for the paper *Highly accurate and large-scale collision cross section prediction with graph neural network for compound identification*.  
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/xiaqiong/DeepCID/master/Flowchart_DeepCID.jpg" width=403 height=316 />
+<img src="https://raw.githubusercontent.com/yuxuanliao/pSCNN/main/Schematic_diagram_of_pSCNN.jpg" width=1063 height=912 />
 </div>
 
 # Installation
