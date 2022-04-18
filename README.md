@@ -12,7 +12,7 @@ python and TensorFlow:
 
 Python 3.7.10 and TensorFlow (version 2.1.0-GPU)
 
-The main packages can be seen in [requirements.txt](https://github.com/XiaqiongFan/DeepResolution2/blob/main/requirements.txt)
+The main packages can be seen in [requirements.txt](https://github.com/yuxuanliao/pSCNN/blob/main/requirements.txt)
 
 # Clone the repository and run it directly
 
