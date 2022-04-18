@@ -14,9 +14,9 @@ Python 3.7.10 and TensorFlow (version 2.1.0-GPU)
 
 The main packages can be seen in [requirements.txt](https://github.com/yuxuanliao/pSCNN/blob/main/requirements.txt)
 
-# Clone the repository and run it directly
+# Clone the repo and run it directly
 
-[git clone at：https://github.com/xiaqiong/DeepCID.git](https://github.com/xiaqiong/DeepCID.git) 
+[git clone at：https://github.com/xiaqiong/DeepCID.git](https://github.com/xiaqiong/DeepCID.git)
 
 # Download the model and run directly
 
