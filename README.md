@@ -16,7 +16,7 @@ The main packages can be seen in [requirements.txt](https://github.com/yuxuanlia
 
 # Clone the repo and run it directly
 
-[git clone at：https://github.com/xiaqiong/DeepCID.git](https://github.com/xiaqiong/DeepCID.git)
+[git clone at：https://github.com/yuxuanliao/pSCNN.git](https://github.com/yuxuanliao/pSCNN.git)
 
 # Download the model and run directly
 
