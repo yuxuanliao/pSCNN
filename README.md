@@ -18,24 +18,17 @@ The main packages can be seen in [requirements.txt](https://github.com/yuxuanlia
 
 [git clone at：https://github.com/yuxuanliao/pSCNN.git](https://github.com/yuxuanliao/pSCNN.git)
 
+An example has been provided in [Usage.ipynb](https://github.com/XiaqiongFan/DeepResolution2/blob/main/usage/Usage.ipynb) script for the convenience of users. 
+
+
 # Download the model and run directly
 
-Since the model exceeded the limit, we have uploaded all the models and the  information of mixtures to the Baidu SkyDrive and Google driver.
+Since the model exceeded the limit, we have uploaded all the models and some GC-MS data to Zenodo.
 
-Download at: [Baidu SkyDrive](https://pan.baidu.com/s/1I0WMEvKvPNicy-i4Ru6uHQ) or [Google driver](https://drive.google.com/drive/folders/1DzMqiJRPDaLn2PcFW_myY_p0PO_VVEpS?usp=sharing)
-
-**1.Training your model**
-
-Run the file 'one-component-model.py'.The corresponding example data have been uploaded to the folder named 'augmented data'.
-
-**2.Predict mixture spectra data**
-
-Run the file 'DeepCID.py'.An example mixture data have been uploaded at Baidu SkyDrive (named  'mixture.npy', 'label.npy' and 'namedata.csv').Download the model and these example data，DeepCID can be reload and predict easily.
-
-# Paper
-[Paper](https://pubs.rsc.org/en/content/articlehtml/2019/an/c8an02212g)
+[https://doi.org/10.5281/zenodo.5498987](https://doi.org/10.5281/zenodo.5498987) 
 
 # Contact
 
-Zhi-Min Zhang: zmzhang@csu.edu.cn
+Yuxuan Liao: 212311021@csu.edu.cn
+
 
