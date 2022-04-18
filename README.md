@@ -5,32 +5,16 @@ Nuclear magnetic resonance (NMR) spectroscopy provides us a powerful tool to ana
 <img src="https://raw.githubusercontent.com/yuxuanliao/pSCNN/main/Schematic_diagram_of_pSCNN.jpg" width=1063 height=912 />
 </div>
 
+
 # Installation
-## Install Python
 
-Python 3.6 is recommended.
+python and TensorFlow:
 
-[python](https://www.python.org)
+Python 3.7.10 and TensorFlow (version 2.1.0-GPU)
 
-## Install tensorflow
+The main packages can be seen in [requirements.txt](https://github.com/XiaqiongFan/DeepResolution2/blob/main/requirements.txt)
 
-[tensorflow](https://www.tensorflow.org)
-
-## Install dependent packages
-
-**1.Numpy**
-
-pip install numpy
-
-**2.Scipy**
-
-pip install Scipy
-
-**3.Matplotlib**
-
-pip install Matplotlib
-
-# Clone the repo and run it directly
+# Clone the repository and run it directly
 
 [git clone at：https://github.com/xiaqiong/DeepCID.git](https://github.com/xiaqiong/DeepCID.git) 
 
