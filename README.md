@@ -26,13 +26,11 @@ Since the model exceeded the limit, we have uploaded all the models and some NMR
 
 **1.Training your model**
 
-**1.Training your model**
-
 Run the file 'dnn.py'.
 
 **2.Predict mixture spectra data**
 
-Run the file 'DeepCID.py'.An example mixture data have been uploaded at Baidu SkyDrive (named  'mixture.npy', 'label.npy' and 'namedata.csv').Download the model and these example data，DeepCID can be reload and predict easily.
+Run the file 'pSCNN.py'.An example mixture data have been uploaded at Zenodo. Download the model and these example data，DeepCID can be reload and predict easily.
 
 # Contact
 
