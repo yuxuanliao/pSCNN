@@ -30,7 +30,7 @@ Run the file 'dnn.py'.
 
 **2.Predict mixture spectra data**
 
-Run the file 'pSCNN.py'.An example mixture data have been uploaded at Zenodo. Download the model and these example data，DeepCID can be reload and predict easily.
+Run the file 'pSCNN.py'.An example mixture data have been uploaded at Zenodo. Download the model and these example data，pSCNN can be reload and predict easily.
 
 # Contact
 
