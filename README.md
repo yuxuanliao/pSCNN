@@ -20,9 +20,9 @@ The main packages can be seen in [requirements.txt](https://github.com/yuxuanlia
 
 # Download the model and run directly
 
-Since the model exceeded the limit, we have uploaded all the models and some NMR data to Zenodo.
+Since the model exceeded the limit, we have uploaded the model and the information of mixtures.
 
-[https://doi.org/10.5281/zenodo.5498987](https://doi.org/10.5281/zenodo.5498987)
+Download at: [Baidu SkyDrive](https://pan.baidu.com/s/1o1eB-3AFS5VIhJSqVMsL1w?pwd=1234)
 
 **1.Training your model**
 
