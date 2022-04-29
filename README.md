@@ -20,21 +20,15 @@ The main packages can be seen in [requirements.txt](https://github.com/yuxuanlia
 
 # Download the model and run directly
 
-Since the model exceeded the limit, we have uploaded the model and some NMR data to Zenodo.
+Since the model exceeded the limit, we have uploaded the model and all the NMR data to Zenodo.
 
-[https://doi.org/10.5281/zenodo.6503603](https://doi.org/10.5281/zenodo.6503603)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6504814.svg)](https://doi.org/10.5281/zenodo.6504814)
 
 
-**1.Training your model**
+**Training your model and predict mixture spectra data**
 
-Run the file 'dnn.py'.
-
-**2.Predict mixture spectra data**
-
-Run the file 'pSCNN.py'.An example mixture data have been uploaded at Zenodo. Download the model and these example data，pSCNN can be reload and predict easily.
+Run the file 'pSCNN.py'. The data have been uploaded at Zenodo. Download the model and these example data，pSCNN can be reload and predict easily.
 
 # Contact
 
 Yuxuan Liao: 212311021@csu.edu.cn
-
-
