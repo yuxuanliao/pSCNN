@@ -26,7 +26,6 @@ def create_convolution_layers(inputs, num_layers = 0):
     return convs
 
 
-
 def pSCNN(xshapes, num_conv_layers):
     inputs = create_input_layers(xshapes)
     convs = create_convolution_layers(inputs, num_layers = num_conv_layers)
@@ -44,11 +43,6 @@ def pSCNN(xshapes, num_conv_layers):
                   metrics=['accuracy'])
     return model
 
-
-def train_pSCNN(model, Xs, y, batch, epochs):
-    Xs3d = [X.reshape((X.shape[0], X.shape[1], 1)) for X in Xs]
-    model.fit(Xs3d, y, batch_size=batch, epochs=epochs, validation_split = 0.1)
-    
 
 
 def save_pSCNN(model, model_name):
@@ -73,71 +67,36 @@ def predict_pSCNN(model, Xs):
     return model.predict(Xs3d)
 
 
-def evaluate_pSCNN(model, Xs, y):
-    Xs3d = [X.reshape((X.shape[0], X.shape[1], 1)) for X in Xs]
-    return model.evaluate(Xs3d, y) 
-
 
 if __name__=="__main__":
-    from readBruker import read_bruker_h, read_bruker_hs, plot_h
-    from augment import data_augmentation
+    from readBruker import read_bruker_h, read_bruker_hs
     import numpy as np
     import pandas as pd
  
     
-    model_save_path = 'D:/workspace/DeepNMR_code/models/n10000_epoch100_6layers_0.0001_pc5/'
+    model_save_path = 'D:/workspace/DeepNMR_code/models/n10000_epoch100_6layers_0.0001_pc5/'  #zenodo
     model_name = 'test_nmr'
-    bTrain = False
-    if bTrain:
-        stds = read_bruker_hs('D:/workspace/DeepNMR/data/standard', False, True, False)
-        aug = data_augmentation(stds, 10000, 5)
-        model = pSCNN([aug['R'].shape, aug['S'].shape], 6)
-        train_pSCNN(model, [aug['R'], aug['S']], aug['y'], 50, 100)
-        save_pSCNN(model, model_save_path + model_name)
-    else:
-        model = load_pSCNN(model_save_path + model_name)
-        plot_loss_accuracy(model)
+
+    model = load_pSCNN(model_save_path + model_name)
         
         
-        query = read_bruker_h('D:/workspace/DeepNMR/data/known/F1', False, True) #2
+    query = read_bruker_h('D:/workspace/DeepNMR/data/known/F1', False, True) #2    #zenodo
  
-        stds = read_bruker_hs('D:/workspace/DeepNMR/data/standard', False, True, False)
+    stds = read_bruker_hs('D:/workspace/DeepNMR/data/standard', False, True, False)   #zenodo
 
 
-         p = query['ppm'].shape[0]
-         n = len(stds)
-         R = np.zeros((n, p), dtype = np.float32)
-         Q = np.zeros((n, p), dtype = np.float32)
-         for i in range(n):
-             R[i, ] = stds[i]['fid']
-             Q[i, ] = query['fid']
-        yp = predict_MICNN(model, [R, Q])
-         
-
-        a = ['Linalyl acetate', 'β-Ionone']
-        ids = []
-        for i in a:
-            for j, s in enumerate(stds):
-                if i == s['name']:
-                    ids.append(j)
-               #print(j)
-        print(ids)
-         
-        y_real = np.zeros((n,1), dtype = np.float32)
-        for i in ids:
-            y_real[i, 0] = 1
-        print(y_real)
-         
-        ev = evaluate_MICNN(model, [R, Q], y_real)
-        yp_real = predict_MICNN(model, [R, Q])
-        yp_real_list = [1 if yp_real[i, 0]>=0.5 else 0 for i in range(yp_real.shape[0])]
-        yp_real = np.array(yp_real_list).reshape(yp_real.shape)
-        cnf_matrix = confusion_matrix(y_real, yp_real)
-        
-        stds_df = pd.read_csv('D:/workspace/DeepNMR_code/data/standards.csv')
-        result_df = pd.DataFrame(columns=['Name','Probability'])
-        for i in range(n):
-            result_df.loc[len(result_df)] = [stds[i]['name'], yp[i][0]]
-        result = pd.merge(stds_df, result_df, on=['Name'])    
+    p = query['ppm'].shape[0]
+    n = len(stds)
+    R = np.zeros((n, p), dtype = np.float32)
+    Q = np.zeros((n, p), dtype = np.float32)
+    for i in range(n):
+        R[i, ] = stds[i]['fid']
+        Q[i, ] = query['fid']
+    yp = predict_pSCNN(model, [R, Q])
         
         
+    stds_df = pd.read_csv('D:/workspace/DeepNMR_code/data/standards.csv')   #zenodo
+    result_df = pd.DataFrame(columns=['Name','Probability'])
+    for i in range(n):
+        result_df.loc[len(result_df)] = [stds[i]['name'], yp[i][0]]
+    result = pd.merge(stds_df, result_df, on=['Name'])
