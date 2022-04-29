@@ -1,5 +1,5 @@
 # pSCNN
-Nuclear magnetic resonance (NMR) spectroscopy provides us a powerful tool to analyze mixtures consisting of small molecules but is difficult to identify compounds in mixtures because of chemical shift variation between samples and peak overlapping among molecules. We presented a pseudo Siamese convolutional neural network method (pSCNN) to solve the problems of compound identification in NMR spectra of mixtures. This is the code repo for the paper *Highly accurate and large-scale collision cross section prediction with graph neural network for compound identification*.  
+Nuclear magnetic resonance (NMR) spectroscopy provides us a powerful tool to analyze mixtures consisting of small molecules but is difficult to identify compounds in mixtures because of chemical shift variation between samples and peak overlapping among molecules. We presented a pseudo Siamese convolutional neural network method (pSCNN) to solve the problems of compound identification in NMR spectra of mixtures. This is the code repo for the paper *Deep Learning-based Method for Compound Identification in NMR Spectra of Mixtures*.  
 
 <div align="center">
 <img src="https://github.com/yuxuanliao/pSCNN/blob/main/Schematic_diagram_of_pSCNN.png" width=917 height=788 />
@@ -20,9 +20,10 @@ The main packages can be seen in [requirements.txt](https://github.com/yuxuanlia
 
 # Download the model and run directly
 
-Since the model exceeded the limit, we have uploaded the model and the information of mixtures.
+Since the model exceeded the limit, we have uploaded the model and some NMR data to Zenodo.
 
-Download at: [Baidu SkyDrive](https://pan.baidu.com/s/1o1eB-3AFS5VIhJSqVMsL1w?pwd=1234)
+[https://doi.org/10.5281/zenodo.6503603](https://doi.org/10.5281/zenodo.6503603)
+
 
 **1.Training your model**
 
