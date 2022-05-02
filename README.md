@@ -27,7 +27,7 @@ Since the model exceeded the limit, we have uploaded the model and all the NMR d
 
 **Training your model and predict mixture spectra data**
 
-Run the file 'pSCNN.py'. The model and these data have been uploaded at Zenodo. Download the model and these example data，pSCNN can be reload and predict easily.
+Run the file 'pSCNN.py'. The model and these data have been uploaded at Zenodo. Download the model and these example data, pSCNN can be reload and predict easily.
 
 # Contact
 
