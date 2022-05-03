@@ -1,6 +1,7 @@
-numpy==1.21.2
+numpy==1.19.2
 tensorflow_gpu==2.5.0
 scipy==1.7.1
 pandas==1.3.4
 scikit_learn==1.0
 nmrglue==0.8
+keras==2.8.0
