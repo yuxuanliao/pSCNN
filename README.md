@@ -8,7 +8,7 @@ Nuclear magnetic resonance (NMR) spectroscopy provides us a powerful tool to ana
 
 # Installation
 
-python and TensorFlow:
+Python and TensorFlow:
 
 Python 3.7.13 and TensorFlow (version 2.5.0-GPU)
 
