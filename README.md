@@ -12,7 +12,7 @@ python and TensorFlow:
 
 Python 3.7.13 and TensorFlow (version 2.5.0-GPU)
 
-The main packages can be seen in [requirements.txt](https://github.com/yuxuanliao/pSCNN/blob/main/requirements.txt)
+The main packages can be seen in [requirements.txt](https://github.com/yuxuanliao/pSCNN/blob/main/requirements/pip/requirements.txt)
 
 - Install Anaconda
   https://www.anaconda.com/
