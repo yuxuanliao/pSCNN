@@ -10,7 +10,7 @@ Nuclear magnetic resonance (NMR) spectroscopy provides us a powerful tool to ana
 
 Python and TensorFlow:
 
-Python 3.7.13 and TensorFlow (version 2.5.0-GPU)
+Python 3.8.13 and TensorFlow (version 2.5.0-GPU)
 
 The main packages can be seen in [requirements.txt](https://github.com/yuxuanliao/pSCNN/blob/main/requirements/pip/requirements.txt)
 
@@ -21,7 +21,7 @@ The main packages can be seen in [requirements.txt](https://github.com/yuxuanlia
 - Install main packages in requirements.txt with following commands 
 
 	```shell
-	conda create --name pSCNN python=3.7.13
+	conda create --name pSCNN python=3.8.13
 	conda activate pSCNN
 	python -m pip install -r requirements.txt
 	pip install tqdm
