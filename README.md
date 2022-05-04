@@ -24,6 +24,7 @@ The main packages can be seen in [requirements.txt](https://github.com/yuxuanlia
 	conda create --name pSCNN python=3.7.13
 	conda activate pSCNN
 	python -m pip install -r requirements.txt
+	pip install tqdm
 	```
 
 
