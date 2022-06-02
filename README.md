@@ -2,7 +2,7 @@
 Nuclear magnetic resonance (NMR) spectroscopy provides us a powerful tool to analyze mixtures consisting of small molecules but is difficult to identify compounds in mixtures because of chemical shift variation of the same compound in different mixtures and peak overlapping among molecules. We presented a pseudo Siamese convolutional neural network method (pSCNN) to solve the problems of compound identification in NMR spectra of mixtures. This is the code repo for the paper *Deep Learning-based Method for Compound Identification in NMR Spectra of Mixtures*.  
 
 <div align="center">
-<img src="https://github.com/yuxuanliao/pSCNN/blob/main/Schematic_diagram_of_pSCNN.png" width=917 height=788 />
+<img src="https://github.com/yuxuanliao/pSCNN/blob/main/data augmentation and the pSCNN method.png" width=917 height=788 />
 </div>
 
 
