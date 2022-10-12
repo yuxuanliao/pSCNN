@@ -97,8 +97,8 @@ if __name__=="__main__":
     R = np.zeros((n, p), dtype = np.float32)
     Q = np.zeros((n, p), dtype = np.float32)
     for i in range(n):
-        R[i, ] = stds[i]['fid']
-        Q[i, ] = query['fid']
+        R[i, ] = stds[i]['data']
+        Q[i, ] = query['data']
     yp = predict_pSCNN(model, [R, Q])
         
         
