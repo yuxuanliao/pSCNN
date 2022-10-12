@@ -17,22 +17,22 @@ def read_bruker_h(nmr_path, bRaw = False, bMinMaxScale = False):
     if bRaw:
         dic, fid = ng.fileio.bruker.read(f'{nmr_path}/1')
         zero_fill_size = dic['acqus']['TD']
-        fid = ng.bruker.remove_digital_filter(dic, fid)
-        fid = ng.proc_base.zf_size(fid, zero_fill_size)
-        fid = ng.proc_base.fft(fid)
-        fid = ng.proc_autophase.autops(fid, 'acme', **{'disp':False})
-        fid = ng.proc_base.rev(fid) 
+        data = ng.bruker.remove_digital_filter(dic, fid)
+        data = ng.proc_base.zf_size(data, zero_fill_size)
+        data = ng.proc_base.fft(data)
+        data = ng.proc_autophase.autops(data, 'acme', **{'disp':False})
+        data = ng.proc_base.rev(data) 
     else:
-        dic, fid = ng.fileio.bruker.read_pdata(f'{nmr_path}/1/pdata/1')
+        dic, data = ng.fileio.bruker.read_pdata(f'{nmr_path}/1/pdata/1')  
         zero_fill_size = dic['acqus']['TD']
     if bMinMaxScale:
-        fid = fid / np.max(fid)
+        data = data / np.max(data)
     offset = (float(dic['acqus']['SW']) / 2) - (float(dic['acqus']['O1']) / float(dic['acqus']['BF1']))
     start = float(dic['acqus']['SW']) - offset
     end = -offset
     step = float(dic['acqus']['SW']) / zero_fill_size
     ppms = np.arange(start, end, -step)[:zero_fill_size]
-    return {'name':nmr_path.split(os.sep)[-1], 'ppm': ppms, 'fid':fid, 'bRaw': bRaw}
+    return {'name':nmr_path.split(os.sep)[-1], 'ppm': ppms, 'data':data, 'bRaw': bRaw}
 
 
 def read_bruker_hs(data_folder, bRaw, bMinMaxScale, bDict):
