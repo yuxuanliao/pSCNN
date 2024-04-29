@@ -45,4 +45,4 @@ Run the file 'pSCNN.py'. The model and these data have been uploaded at Zenodo. 
 
 # Contact
 
-Yuxuan Liao: 212311021@csu.edu.cn
+Yuxuan Liao: 232303012@csu.edu.cn
